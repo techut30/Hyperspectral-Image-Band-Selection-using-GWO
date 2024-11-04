@@ -69,7 +69,9 @@ The dataset used is the Indian Pines hyperspectral dataset. The data is reshaped
 The GWO algorithm optimizes the band selection process. The algorithm is configured with:
 
 **dim**: Number of bands to select.
+
 **lb and ub**: Lower and upper bounds for band indices.
+
 **num_wolves and max_iter**: Parameters defining the number of wolves and iterations.
 
 ### Timer

@@ -7,7 +7,7 @@ This repository contains Python code for selecting the optimal bands from hypers
 ## Overview
 
 The repository includes two main files:
-- `main.py`: Uses a K-Nearest Neighbors (KNN) classifier for band selection.
+- `GWO_KNN.py`: Uses a K-Nearest Neighbors (KNN) classifier for band selection.
 - `GWO_RandomForest.py`: Alternative approach that uses a Random Forest classifier for band selection.
 
 Both files utilize Gray Wolf Optimization to identify the optimal subset of spectral bands for classification.
@@ -24,7 +24,7 @@ Both files utilize Gray Wolf Optimization to identify the optimal subset of spec
 
 ## Files
 
-### `main.py`
+### `GWO_KNN.py`
 
 This file performs band selection using the GWO algorithm and classifies using the **K-Nearest Neighbors** classifier.
 
@@ -35,4 +35,4 @@ This file performs band selection using the GWO algorithm and classifies using t
 
 #### Usage
 ```python
-python main.py
+python GWO_KNN.py

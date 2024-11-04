@@ -36,3 +36,61 @@ This file performs band selection using the GWO algorithm and classifies using t
 #### Usage
 ```python
 python GWO_KNN.py
+
+```
+
+### `GWO_RandomForest.py`
+
+An alternative approach where band selection is performed using the **Random Forest classifier** instead of KNN. This script is structured similarly to main.py, with the following differences:
+
+1. **Classifier**: Uses RandomForestClassifier with 100 estimators to evaluate the fitness of the selected bands.
+2. **Parameters**: Adjusted parameters for GWO, including a higher number of bands and wolves.
+3. **Visualization**: Visualizes the selected bands as a composite image.
+
+### Usage
+
+```python
+python GWO_RandomForest.py
+```
+
+## Code Explanation 
+
+### Objective Function for Band Selection
+
+The objective function in both scripts takes in a set of selected bands, trains a classifier (KNN or Random Forest), and returns the error rate based on classification accuracy. The goal is to minimize this error rate, which represents the fitness score for GWO.
+
+### DataSet Loading 
+
+The dataset used is the Indian Pines hyperspectral dataset. The data is reshaped to (pixels, bands) format, and unlabeled pixels (background) are removed for accurate band selection.
+
+
+### Gray Wolf Optimization 
+
+The GWO algorithm optimizes the band selection process. The algorithm is configured with:
+
+**dim**: Number of bands to select.
+**lb and ub**: Lower and upper bounds for band indices.
+**num_wolves and max_iter**: Parameters defining the number of wolves and iterations.
+
+### Timer
+
+A timer function displays the elapsed time for the optimization process.
+
+
+## Example Outputs
+
+Upon running each script, the output includes:
+
+**Best Bands Selected**: The optimal subset of bands for classification.
+**Best Score (Error Rate)**: The minimized classification error achieved.
+**Composite Image**: A visualization of the selected bands.
+
+## References 
+
+1. Gray Wolf Optimizer: Inspired by the social hierarchy and hunting strategy of gray wolves.
+2. Indian Pines Dataset: Commonly used hyperspectral dataset for classification tasks.
+
+
+
+
+

@@ -82,7 +82,9 @@ A timer function displays the elapsed time for the optimization process.
 Upon running each script, the output includes:
 
 **Best Bands Selected**: The optimal subset of bands for classification.
+
 **Best Score (Error Rate)**: The minimized classification error achieved.
+
 **Composite Image**: A visualization of the selected bands.
 
 ## References 
